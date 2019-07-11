@@ -1,79 +1,62 @@
-//// CAPITALIZE ////
-String.prototype.firstCharToUpper = function () {
+// CAPITALIZE
+String.prototype.capitalized = function() {
     if (this.length == 0) return ''
     return this.charAt(0).toUpperCase() + this.slice(1)
 };
 
-//// ALL CAPS ////
-String.prototype.allCaps = function () {
+// ALL CAPS
+String.prototype.allCapitalized = function() {
     return this.toUpperCase()
 };
 
-//// CAPITALIZE WORDS ////
-String.prototype.allfirstCharsToUpper = function () {
-    return this.split(' ').map(word => word.firstCharToUpper()).join(' ')
+// CAPITALIZE WORDS
+String.prototype.firstCharsToUpper = function() {
+    return this.split(' ').map(word => word.capitalized()).join(' ')
 };
 
-//// ODD CAPS ////
-String.prototype.upperEveryOtherLetter = function () {
-    let new_str = '';
-    let skip = false;
-    for (letter of this) {
-        if (letter.isLetter()) {
-            if (skip) skip = false;
-            else {
-                letter = letter.toUpperCase();
-                skip = true;
-            }
-        }
-        new_str += letter;
-    }
-    return new_str
+// Even CAPS
+String.prototype.evenCaps = function () {
+    const letterList = Array.from(this);
+    let finalString = "";
+    letterList.forEach((char, index) => {
+      if(index % 2 === 1) {
+        let upperLetter = char.toUpperCase();
+        finalString = finalString.concat(upperLetter);
+      } else {
+        finalString = finalString.concat(char);
+      }
+    });
+    return finalString
 };
 
-//// REMOVE EXTRA SPACES ////
-String.prototype.removeWhiteSpace = function () {
-    let space = true;
-    let removedSpaces = '';
-    for (letter of this) {
-        if ((letter != ' ') || (!space)) {
-            removedSpaces += letter;
-            space = ((letter == ' ') ? true : false);
-        }
-    }
-    if (removedSpaces[removedSpaces.length - 1] == ' ') removedSpaces = removedSpaces.slice(0, -1);
-    return removedSpaces
+// Odd CAPS
+String.prototype.oddCaps = function () {
+    const letterList = Array.from(this);
+    let finalString = "";
+    letterList.forEach((char, index) => {
+      if(index % 2 === 0) {
+        let upperLetter = char.toUpperCase();
+        finalString = finalString.concat(upperLetter);
+      } else {
+        finalString = finalString.concat(char);
+      }
+    });
+    return finalString
 };
 
-//// KABOB CASE ////
+// Remove White Space
+String.prototype.removeSpaces = function () {
+	return this.replace(/\s/g,'')
+};
+
+// KABOB CASE
 String.prototype.kabobCase = function () {
     return this.removeWhiteSpace().split(' ').join('-')
 };
 
-//// SNAKE CASE ////
+// SNAKE CASE
 String.prototype.snakeCase = function () {
     return this.removeWhiteSpace().split(' ').join('_')
 };
 
-/// CAMEL CASE ////
-String.prototype.camelCase = function () {
-    let camelStr = '';
-    let firstWord = true;
-    for (word of this.removeWhiteSpace().split(' ')) {
-        if (firstWord) {
-            camelStr += word;
-            firstWord = false;
-        }
-        else camelStr += word.firstCharToUpper();
-    }
-    return camelStr
-};
-
-// module.exports.firstCharToUpper = firstCharToUpper
-// module.exports.allCaps = allCaps
-// module.exports.allfirstCharsToUpper = allfirstCharsToUpper
-// module.exports.upperEveryOtherLetter = upperEveryOtherLetter
-// module.exports.removeWhiteSpace = removeWhiteSpace
-// module.exports.kabobCase = kabobCase
-// module.exports.snakeCase = snakeCase
-// module.exports.camelCase = camelCase
+// module.exports.capitalized = capitalized

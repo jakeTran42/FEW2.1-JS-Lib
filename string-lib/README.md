@@ -1,9 +1,10 @@
 ### Methods
 
-1. firstChaToUpper()
-2. allCaps()
-3. allfirstCharsToUpper()
-4. upperEveryOtherLetter()
-5. removeWhiteSpace()
-6. snakeCase()
-7. camelCase()
+1. capitalized()
+2. allCapitalized()
+3. firstCharsToUpper()
+4. evenCaps()
+5. oddCaps()
+6. removeSpaces()
+7. kabobCase()
+8. snakeCase()
