@@ -30,7 +30,7 @@ String.prototype.evenCaps = function () {
 }
 
 // Odd CAPS
-String.prototype.evenCaps = function () {
+String.prototype.oddCaps = function () {
     const letterList = Array.from(this)
     let finalString = ""
     letterList.forEach((char, index) => {
@@ -59,11 +59,4 @@ String.prototype.snakeCase = function () {
     return this.removeWhiteSpace().split(' ').join('_')
 }
 
-// module.exports.firstCharToUpper = firstCharToUpper
-// module.exports.allCaps = allCaps
-// module.exports.allfirstCharsToUpper = allfirstCharsToUpper
-// module.exports.upperEveryOtherLetter = upperEveryOtherLetter
-// module.exports.removeWhiteSpace = removeWhiteSpace
-// module.exports.kabobCase = kabobCase
-// module.exports.snakeCase = snakeCase
-// module.exports.camelCase = camelCase
+// module.exports.capitalized = capitalized
