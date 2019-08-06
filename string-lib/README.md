@@ -1,4 +1,4 @@
-##Stringily
+## Stringily
 
 A basic library to manipulate strings. Methods are generated with prototypes.
 
