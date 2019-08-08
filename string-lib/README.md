@@ -1,3 +1,9 @@
+![npm bundle size](https://img.shields.io/bundlephobia/min/stringily-lib?style=flat-square)
+
+[![GitHub issues](https://img.shields.io/github/issues/jakeTran42/FEW2.1-JS-Lib?style=flat-square)](https://github.com/jakeTran42/FEW2.1-JS-Lib/issues)
+
+![Coverage](https://img.shields.io/badge/coverage-96%25-brightgreen?style=flat-square&logo=appveyor)
+
 ## Stringily
 
 A basic library to manipulate strings. Methods are generated with prototypes.

@@ -3,22 +3,22 @@ class DubloonsCoin {
         this.value = value
     }
 
-    multiply(n) {
+    multiply(dc) {
         this.value *= n
         return this
     }
     
-    add(n) {
-        this.value += n
+    add(dc) {
+        this.value = ((this.value*100)+(dc*100))/100
         return this
     }
     
-    divide(n) {
+    divide(dc) {
         this.value /= n
         return this
     }
     
-    subtract(n) {
+    subtract(dc) {
         this.value -= n
         return this
     }

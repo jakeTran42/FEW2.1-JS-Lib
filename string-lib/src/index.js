@@ -51,12 +51,12 @@ String.prototype.removeSpaces = function () {
 
 // KABOB CASE
 String.prototype.kabobCase = function () {
-    return this.removeWhiteSpace().split(' ').join('-')
+    return this.split(' ').join('-')
 }
 
 // SNAKE CASE
 String.prototype.snakeCase = function () {
-    return this.removeWhiteSpace().split(' ').join('_')
+    return this.split(' ').join('_')
 }
 
 // module.exports.capitalized = capitalized
