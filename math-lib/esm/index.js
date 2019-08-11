@@ -27,7 +27,7 @@ function tax(num, rate) {
     throw new Error("The tax rate needs to be within 0 and 1! or 0 and 100!");
 }
 function withTax(amount, rate) {
-    return (Math.round((amount + amount * rate) * 100) / 100);
+    return Math.round((amount + amount * rate) * 100) / 100;
 }
 function interest(num, rate, years, decimalPlaces) {
     if (decimalPlaces === void 0) { decimalPlaces = 2; }
