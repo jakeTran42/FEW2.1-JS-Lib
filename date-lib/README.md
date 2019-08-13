@@ -1,33 +1,17 @@
-# Just Another Date Library
+## Librarily
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/just-another-date-library.svg)
-![npm](https://img.shields.io/npm/v/just-another-date-library.svg)
-[![Build Status](https://travis-ci.com/anselb/just-another-date-library.svg?branch=master)](https://travis-ci.com/anselb/just-another-date-library)
-[![Coverage Status](https://coveralls.io/repos/github/anselb/just-another-date-library/badge.svg?branch=master)](https://coveralls.io/github/anselb/just-another-date-library?branch=master)
+A simple library that can do what vanilla JS can already do but funner.
 
-A library with some miscellaneous date things. Some methods were created with the intention of making them more clear. For example, `Date.prototype.getMonth()` returning a month index vs `month()` returning the actual name of the month, and `Date.prototype.getDate()` sounding like it returns the whole date vs `day()` actually returning the day of the month.
+![](https://img.shields.io/badge/version-1.0.1-blue?style=flat-square)
+![](https://img.shields.io/badge/coverage-90%25-green?style=flat-square)
 
-## D Class
-  - `new D()` - A class that extends the Date prototype. D will have all the same Date prototype methods as well as new methods that do similar and new things.
-
-## D Methods
-  - `year()` - Returns the 4-digit year of `D`'s date value.
-  - `month()` - Returns the name of the month of `D`'s date value.
-  - `day()` - Returns the day of the month of `D`'s date value.
-  - `hour()` - Returns the hour of the day of `D`'s date value.
-  - `min()` - Returns the minute of the hours of `D`'s date value.
-  - `sec()` - Returns the second of the minute of `D`'s date value.
-  - `format(maskedStr)` - Returns a formatted string replacing characters in the string with date values.
-     - `Y` - Y is replaced by the full year
-     - `y` - y is replaced by the last 2 digits of the year
-     - `M` - M is replaced by the full month
-     - `m` - m is replaced by the first 3 characters of the month
-     - `D` - D is replaced by the day, padded with 2 zeros
-     - `d` - d is replaced by the day, without padding
-     - `H` - H is replaced by the hour, padded with 2 zeros
-     - `h` - h is replaced by the hour, without padding
-     - `I` - I is replaced by the minute, padded with 2 zeros
-     - `i` - i is replaced by the minute, without padding
-     - `S` - S is replaced by the second, padded with 2 zeros
-     - `s` - s is replaced by the second, without padding
-  - `when(now)` - Returns how much time has elapsed in either years, months, or days from the `now` parameter to the date value of the `D` class.
+| Methods  | Desc  |
+|---|---|
+| getYear()  | Return the year of the date passed in  |
+| getMonth()  | Return the month string of given date  |
+| getDay()  | Return the day (num) of given date  |
+| getHour()  | Return hour of the given date  |
+| getMinute()  | Return the minute of given date  |
+| getSecond()  | Return the seconds of the given date  |
+| format(maskStr)  | This return the date in any format you want using these characters `Yy-Mm-Dd-Hh-Ii-Ss`  |
+| when() | tells you when the given date will happen |
