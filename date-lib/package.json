@@ -1,0 +1,31 @@
+{
+  "name": "librarily",
+  "version": "1.0.1",
+  "description": "A date library that imitates what we can already get from vanilla JS",
+  "files": [
+    "esm/*",
+    "emd/*"
+  ],
+  "main": "umd/librarily.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "prepare": "rollup --config",
+    "test": "jest"
+  },
+  "author": "jaketran42",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "coveralls": "^3.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.14.1",
+    "jest": "^24.8.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-terser": "^5.1.1"
+  }
+}
